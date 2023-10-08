@@ -1,27 +1,37 @@
-# React + TypeScript + Vite
+React Redux Login App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+This is a simple login app built with React and Redux. It allows users to register by adding a username and password, and login to see a list of registered users.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Features
+User registration
+User login
+View list of registered users
+Uses React for UI
+Redux for state management
+Usage
+To run the app:
 
-## Expanding the ESLint configuration
+Clone the repo
+Run npm install to install dependencies
+Run npm start to start the dev server
+Open http://localhost:3000 to view the app
+The app has two main pages:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Login Page
+Allows users to enter a username and password. Clicking the "Add User" button dispatches an action to add the user credentials to the Redux store.
 
-- Configure the top-level `parserOptions` property like this:
+User List Page
+Shows a list of registered users from the Redux store state.
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+State Management
+The app uses Redux for state management. The store is configured with a users reducer that handles adding users on registration.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+React components dispatch Redux actions for user registration. The Redux reducers update the state, which is passed back to components via the useSelector hook.
+
+TODO
+Implement input validation
+Add user login logic
+Improve styling
+Credits
+Built by [Your Name]
